@@ -5,7 +5,8 @@ body{
 .slides{
     position: relative;
     width: 100%;
-    margin: auto;
+    height: 100%;
+    margin: 0;
     overflow: hidden;
 
     display: flex;
@@ -15,7 +16,6 @@ body{
 .slide{
     display: none;
     height: 100vh;
-    
 }
 
 .slide img{
@@ -47,6 +47,7 @@ body{
     border-radius: 10px;
 
     width: 450px;
+    max-width: 95%;
 
     backdrop-filter: blur(5px);
     box-shadow: 0 0 30px rgb(217, 255, 0);
