@@ -1,0 +1,112 @@
+body{
+    margin: 0;
+    background-color: rgb(0, 0, 0);
+}
+.slides{
+    position: relative;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.slide{
+    display: none;
+    height: 100vh;
+    
+}
+
+.slide img{
+    align-self: center;
+    aspect-ratio: 16 / 12;
+    height: 100%;
+    max-width: 1000px;
+    object-fit: cover;
+    animation-name: fade;
+    animation-duration: 1s; 
+    z-index: 0;
+}
+.slide h1{
+    
+    background-color: rgba(11, 221, 158, 0.205);
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
+    bottom: 0;
+    z-index: 1;
+
+    text-align: center;
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 3rem;
+    color: rgb(36, 41, 52);
+
+    padding: 5px;
+    border-radius: 10px;
+
+    width: 450px;
+
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 30px rgb(217, 255, 0);
+
+    animation-name: lights;
+    animation-duration: 1s; 
+
+    transition: box-shadow .5s, background-color .5s, color .5s;
+}
+.slide h1:hover{
+    background-color: rgba(0, 0, 0, 0.75);
+    color: rgb(242, 255, 0);
+    box-shadow: 0 0 50px rgb(60, 255, 0);
+}
+
+button{
+
+    aspect-ratio: 1/1;
+    width: 60px;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    position: absolute;
+    top: 50%;
+    transform: translateY(-100%);
+    font-size: 2rem;
+    background-color: rgb(214, 166, 61);
+    color: black;
+    border: none;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 10px;
+
+    margin: 30px;
+
+    transition: background-color .4s, box-shadow .4s, color .4s;
+
+}
+button:hover{
+    color: blue;
+    background-color: rgb(208, 208, 73);
+    box-shadow: 0 0 50px yellowgreen;
+}
+
+.display{
+    display: block;
+}
+
+.previous{
+    left: 0;
+}
+.next{
+    right: 0;
+}
+
+@keyframes fade{
+    from {opacity: .6;}
+    to {opacity: 1;}
+}
+@keyframes lights{
+    from { box-shadow: 0 0 0 rgb(217, 255, 0);}
+    to { box-shadow: 0 0 30px rgb(217, 255, 0);}
+}
